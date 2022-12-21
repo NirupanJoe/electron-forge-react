@@ -27,5 +27,19 @@
  */
 
 import './index.css';
+// Add this to the end of the existing file
+import App from './app';
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+
+// const render = () => {
+//   ReactDOM.render(<App></App>, document.getElementById('root'));
+// }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
